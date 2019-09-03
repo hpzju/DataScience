@@ -8,6 +8,7 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{lipsum}
 % fancyhdr is a package that deals with headers and footers.
 \usepackage{fancyhdr}
 \setlength{\headheight}{15pt}
@@ -114,17 +115,38 @@ show tables
   \label{tab-with-line}	
 \end{table}
 
+\begin{table}[h]
+  \caption{a example}
+  \label{tab-with-multicolumn}
+  \centering
+  \begin{tabular}{|l|l|cccc|r|c|}
+    \hline
+    \multicolumn{8}{|c|}{Eredivisie 26 maart 2008} \\
+    \hline
+    & & P & W & D & L & Pts & +/- \\
+    \hline
+    1 & PSV & 30 & 19 & 7 & 4 & 64 & 61 - 23 \\
+    2 & Ajax & 30 & 16 & 9 & 5 & 57 & 79 - 40 \\
+    ...
+    18 & Excelsior & 30 & 6 & 5 & 19 & 23 & 29 - 67 \\
+    \hline
+    \end{tabular}
+\end{table}
+
 
 
 
 {\section{Image section}}
-
-\begin{figure}[hp]
+show image in this section
+\begin{figure}[h]
   \centering
-  \includegraphics[width=1\textwidth]{test}
+  \includegraphics[width=0.6\linewidth]{test}
   \caption{Here is my image}
   \label{image-myimage}
   \end{figure}
+
+\paragraph{lorem 10}
+\lipsum{1,10}
 
 
 {\section{Math section}}
